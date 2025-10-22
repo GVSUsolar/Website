@@ -27,45 +27,27 @@
     @media (max-width:980px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:640px){.grid{grid-template-columns:1fr}}
 
-    h2,h3,h4{color:#0f172a;}
-    p{color:#0f172a;}
+    h2{margin:0 0 10px}
+    .muted{color:var(--muted)}
     ul.roster{list-style:none;padding:0;margin:0}
     ul.roster li{padding:6px 0;border-bottom:1px solid #eef2f6}
-    .specs dt{font-weight:700; color:#0f172a;}
-    .specs dd{margin:0 0 8px 0; color:#0f172a;}
+    .specs dt{font-weight:700}
+    .specs dd{margin:0 0 8px 0}
 
     footer{padding:24px 0;color:var(--muted);text-align:center}
     .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
     .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
 
-    /* Sponsorship Scrolling Bar */
-    .sponsor-bar {
-      overflow:hidden;
-      background: transparent;
-      padding:12px 0;
-      margin:16px 0;
-      border-radius:8px;
-    }
-    .sponsor-track {
-      display:flex;
-      width:max-content;
-      animation: scroll 20s linear infinite;
-      align-items:center;
-      gap:40px;
-    }
-    .sponsor-track img {
-      height:50px;
-      width:auto;
-      display:block;
-    }
-    .sponsor-track span {
-      color:white;
-      font-weight:600;
-      white-space:nowrap;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    /* Sponsorship Bar */
+    .sponsor-bar{overflow:hidden;white-space:nowrap;background:var(--card);border-radius:8px;padding:10px 0;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+    .sponsor-track{display:inline-block;animation:scroll 30s linear infinite}
+    .sponsor-item{display:inline-flex;align-items:center;gap:10px;padding:0 30px}
+    .sponsor-item img{height:40px;width:auto;border-radius:4px}
+    .sponsor-item span{font-weight:600;color:var(--accent-2)}
+
+    @keyframes scroll{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-50%)}
     }
   </style>
 </head>
@@ -96,10 +78,10 @@
         </div>
 
         <div class="card">
-          <h3 style="margin-top:0;">Highlights</h3>
-          <p style="color:#0f172a;">Innovation, collaboration, and sustainability drive every design and race we enter.</p>
+          <h3 style="margin-top:0">Highlights</h3>
+          <p class="muted">Innovation, collaboration, and sustainability drive every design and race we enter.</p>
           <hr style="border:none;border-top:1px solid #eef2f6;margin:12px 0">
-          <h4 style="margin:0 0 8px;">Quick Facts</h4>
+          <h4 style="margin:0 0 8px">Quick Facts</h4>
           <dl class="specs">
             <dt>University</dt><dd>Grand Valley State University</dd>
             <dt>Focus</dt><dd>Solar-electric vehicle design, aerodynamics, power electronics</dd>
@@ -113,12 +95,12 @@
   <main class="container">
     <section id="about" class="card" style="margin-bottom:16px">
       <h2>About Us</h2>
-      <p>We are a multidisciplinary student team that brings together mechanical, electrical, and computer engineering to create a competitive solar vehicle. Our mission is to educate, innovate, and promote renewable transportation.</p>
+      <p class="muted">We are a multidisciplinary student team that brings together mechanical, electrical, and computer engineering to create a competitive solar vehicle. Our mission is to educate, innovate, and promote renewable transportation.</p>
     </section>
 
     <section id="car" class="card" style="margin-bottom:16px">
       <h2>Our Car</h2>
-      <p>A lightweight, aerodynamic solar-electric prototype built to maximize efficiency.</p>
+      <p class="muted">A lightweight, aerodynamic solar-electric prototype built to maximize efficiency.</p>
       <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
         <div style="flex:1;min-width:220px">
           <h3 style="margin-top:0">Specifications</h3>
@@ -141,9 +123,28 @@
       </div>
     </section>
 
+    <section class="card" id="sponsors" style="margin-bottom:16px">
+      <h2>Our Sponsors</h2>
+      <div class="sponsor-bar">
+        <div class="sponsor-track">
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+1" alt="Sponsor 1"><span>Company One</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+2" alt="Sponsor 2"><span>Company Two</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+3" alt="Sponsor 3"><span>Company Three</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+4" alt="Sponsor 4"><span>Company Four</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+5" alt="Sponsor 5"><span>Company Five</span></div>
+          <!-- repeat logos to ensure continuous scrolling -->
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+1" alt="Sponsor 1"><span>Company One</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+2" alt="Sponsor 2"><span>Company Two</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+3" alt="Sponsor 3"><span>Company Three</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+4" alt="Sponsor 4"><span>Company Four</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+5" alt="Sponsor 5"><span>Company Five</span></div>
+        </div>
+      </div>
+    </section>
+
     <section id="team" class="card" style="margin-bottom:16px">
       <h2>Team</h2>
-      <p>Team Leads</p>
+      <p class="muted">Team Leads</p>
       <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
         <div style="flex:1;min-width:220px">
           <h4>Core Team</h4>
@@ -157,27 +158,14 @@
         </div>
         <div style="flex:1;min-width:220px">
           <h4>Get Involved</h4>
-          <p>We work year round. No prior experience required — training and mentorship provided.</p>
+          <p class="muted">We work year round. No prior experience required — training and mentorship provided.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Sponsorship Section -->
-    <section class="sponsor-bar">
-      <div class="sponsor-track">
-        <span>Our Sponsors:</span>
-        <img src="https://via.placeholder.com/150x50?text=Logo+1" alt="Sponsor 1">
-        <img src="https://via.placeholder.com/150x50?text=Logo+2" alt="Sponsor 2">
-        <img src="https://via.placeholder.com/150x50?text=Logo+3" alt="Sponsor 3">
-        <img src="https://via.placeholder.com/150x50?text=Logo+4" alt="Sponsor 4">
-        <img src="https://via.placeholder.com/150x50?text=Logo+1" alt="Sponsor 1 duplicate">
-        <img src="https://via.placeholder.com/150x50?text=Logo+2" alt="Sponsor 2 duplicate">
       </div>
     </section>
 
     <section id="contact" class="card">
       <h2>Contact</h2>
-      <p>Questions, sponsorships, or want to join? Reach out to our team email or follow us on social media.</p>
+      <p class="muted">Questions, sponsorships, or want to join? Reach out to our team email or follow us on social media.</p>
       <p style="margin:8px 0"><strong>Email:</strong> <a href="mailto:grandvalleysolarracing@gmail.com">grandvalleysolarracing@gmail.com</a></p>
       <p style="margin:8px 0"><strong>Social:</strong> <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">LinkedIn</a></p>
     </section>
