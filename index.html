@@ -37,6 +37,18 @@
     footer{padding:24px 0;color:var(--muted);text-align:center}
     .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
     .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+    /* Sponsorship Bar */
+    .sponsor-bar{overflow:hidden;white-space:nowrap;background:var(--card);border-radius:8px;padding:10px 0;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+    .sponsor-track{display:inline-block;animation:scroll 30s linear infinite}
+    .sponsor-item{display:inline-flex;align-items:center;gap:10px;padding:0 30px}
+    .sponsor-item img{height:40px;width:auto;border-radius:4px}
+    .sponsor-item span{font-weight:600;color:var(--accent-2)}
+
+    @keyframes scroll{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-50%)}
+    }
   </style>
 </head>
 <body>
@@ -66,8 +78,8 @@
         </div>
 
         <div class="card">
-          <h3 style="margin-top:0">Next Event</h3>
-          <p class="muted">Regional Solar Challenge — <strong>Date TBD</strong></p>
+          <h3 style="margin-top:0">Highlights</h3>
+          <p class="muted">Innovation, collaboration, and sustainability drive every design and race we enter.</p>
           <hr style="border:none;border-top:1px solid #eef2f6;margin:12px 0">
           <h4 style="margin:0 0 8px">Quick Facts</h4>
           <dl class="specs">
@@ -107,6 +119,25 @@
             <img alt="Team" src="https://via.placeholder.com/600x400?text=Team+Photo+1">
             <img alt="Workshop" src="https://via.placeholder.com/600x400?text=Workshop+Photo">
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="sponsors" style="margin-bottom:16px">
+      <h2>Our Sponsors</h2>
+      <div class="sponsor-bar">
+        <div class="sponsor-track">
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+1" alt="Sponsor 1"><span>Company One</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+2" alt="Sponsor 2"><span>Company Two</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+3" alt="Sponsor 3"><span>Company Three</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+4" alt="Sponsor 4"><span>Company Four</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+5" alt="Sponsor 5"><span>Company Five</span></div>
+          <!-- repeat logos to ensure continuous scrolling -->
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+1" alt="Sponsor 1"><span>Company One</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+2" alt="Sponsor 2"><span>Company Two</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+3" alt="Sponsor 3"><span>Company Three</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+4" alt="Sponsor 4"><span>Company Four</span></div>
+          <div class="sponsor-item"><img src="https://via.placeholder.com/120x40?text=Logo+5" alt="Sponsor 5"><span>Company Five</span></div>
         </div>
       </div>
     </section>
